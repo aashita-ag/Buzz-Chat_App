@@ -1,7 +1,7 @@
-import 'package:buzz/Registration_screen.dart';
+import 'package:buzz/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'Login_screen.dart';
+import 'login_screen.dart';
 
 class Homepage extends StatefulWidget {
   static String id = 'homepage';

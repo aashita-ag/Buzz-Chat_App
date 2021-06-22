@@ -1,6 +1,6 @@
-import 'package:buzz/Login_screen.dart';
+import 'package:buzz/login_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:buzz/Registration_screen.dart';
+import 'package:buzz/registration_screen.dart';
 
 import 'homepage.dart';
 void main() {

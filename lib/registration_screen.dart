@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'contants.dart';
+import 'constants.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static String id = 'registration_screen';
