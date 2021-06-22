@@ -19,7 +19,10 @@ class _HomepageState extends State<Homepage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          //TODO: add Vector
+          Container(
+            child: Image.asset('images/logo.png'),
+            height: 200,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

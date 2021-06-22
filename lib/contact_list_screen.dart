@@ -1,5 +1,7 @@
+import 'package:buzz/chat_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ContactListScreen extends StatefulWidget {
   static String id = 'contact_list_screen';
@@ -23,7 +25,7 @@ class _ContactListScreenState extends State<ContactListScreen> {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(8),
           child: Column(
             children: [
               Container(
@@ -53,43 +55,66 @@ class _ContactListScreenState extends State<ContactListScreen> {
 class ContactItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Icon(
-                Icons.account_circle,
-                color: Colors.cyan,
-                size: 50,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              Expanded(
-                child: Text(
-                  'Devu',
-                  style: TextStyle(
-                    fontSize: 22,
+    return Padding(
+      padding: EdgeInsets.all(8),
+      child: Material(
+        color: Color(0xB2A3C2BF),
+        borderRadius: BorderRadius.circular(20),
+        child: Padding(
+          padding: EdgeInsets.only(bottom: 8,top: 3),
+          child: IntrinsicHeight(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                SizedBox(
+                  width: 15,
+                ),
+                IconButton(
+                  onPressed: (){
+                    Navigator.pushNamed(context, ChatScreen.id);
+                  },
+                  icon: Icon(FontAwesomeIcons.userCircle),
+                  color: Colors.cyan,
+                  iconSize: 50,
+                ),
+                Expanded(
+                  child: MaterialButton(
+                    onPressed:(){
+                      Navigator.pushNamed(context, ChatScreen.id);
+                    },
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Devu',
+                        style: TextStyle(
+                          fontSize: 22,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-              ),
-              Icon(
-                Icons.phone,
-                color: Color(0xFF4297A0),
-              ),
-              SizedBox(
-                width: 10,
-              ),
-            ],
+                VerticalDivider(
+                  color: Color(0xFF2B7C85),
+                  indent: 5,
+                  thickness: 1,
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                IconButton(
+                  onPressed: (){},
+                  icon: Icon(
+                    Icons.phone,
+                    color: Color(0xFF4297A0),
+                  ),
+                ),
+                SizedBox(
+                  width: 15,
+                ),
+              ],
+            ),
           ),
-          Divider(
-            color: Colors.blueGrey,
-            indent: 15,
-            endIndent: 15,
-          )
-        ],
+        ),
       ),
     );
   }
