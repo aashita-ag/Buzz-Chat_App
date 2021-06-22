@@ -68,11 +68,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   color: Colors.black,
                   borderRadius: BorderRadius.circular(30.0),
                   child: MaterialButton(
-                      onPressed: null,
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(fontSize: 20.0, color: Colors.white),
-                      )),
+                    onPressed: null,
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    ),
+                  ),
                 ),
               ),
             ],
