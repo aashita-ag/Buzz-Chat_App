@@ -2,10 +2,14 @@ import 'package:buzz/contact_list_screen.dart';
 import 'package:buzz/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buzz/registration_screen.dart';
-import 'package:buzz/contact_list_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+
 
 import 'homepage.dart';
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(Buzz());
 }
 class Buzz extends StatelessWidget {
