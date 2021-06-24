@@ -1,4 +1,3 @@
-import 'package:buzz/contact_list_screen.dart';
 import 'package:buzz/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:buzz/registration_screen.dart';
