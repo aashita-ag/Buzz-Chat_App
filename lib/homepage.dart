@@ -15,31 +15,67 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
+
         children: [
-          //TODO: add Vector
+          Image.asset('images/Messages-pana.png'),
+          SizedBox(
+            height: 20.0,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                'BUZZ',
-                style: TextStyle(
-                  fontSize: 45.0,
-                  fontWeight: FontWeight.w900,
+              Hero(
+                tag: 'name',
+                child: Text(
+                  'BUZZ',
+                  style: TextStyle(
+                    fontSize: 45.0,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: 'ConcertOne',
+                    color:Color(0xff455A64),
+                  ),
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: 48.0,
+            height: 30.0,
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30,right: 30),
+            child: Expanded(
+              child: Text(
+                'In the tumultuous business of cutting-in and attending to a whale, there is.',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey,
+                fontSize: 14,),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 30.0,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
             child: Material(
-              elevation: 5.0,
-              color: Colors.black,
+              elevation:5.0,
+              color: Color(0xff92E3A9),
+              borderRadius: BorderRadius.circular(30.0),
+              child: MaterialButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, RegistrationScreen.id);
+                  },
+                  child: Text(
+                    'Get started',
+                    style: TextStyle(fontSize: 20.0, color: Colors.black54,
+                    ),
+                  )),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+            child: Material(
               borderRadius: BorderRadius.circular(30.0),
               child: MaterialButton(
                   onPressed: () {
@@ -47,23 +83,7 @@ class _HomepageState extends State<Homepage> {
                   },
                   child: Text(
                     'Login',
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
-                  )),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 30),
-            child: Material(
-              elevation: 5.0,
-              color: Colors.black,
-              borderRadius: BorderRadius.circular(30.0),
-              child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RegistrationScreen.id);
-                  },
-                  child: Text(
-                    'Sign Up',
-                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+                    style: TextStyle(fontSize: 20.0, color: Color(0xff455A64)),
                   )),
             ),
           ),
